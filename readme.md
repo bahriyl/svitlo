@@ -40,12 +40,12 @@ This project consists of a FastAPI-based backend application and a Telegram bot 
     - Inline keyboard for city and queue selection.
     - Dynamic schedule retrieval.
     - Queue management.
-- **main.py**: Handles integration and communication with other parts of the system.
-- **scheduler.py**: Handles scheduling-related logic (uploaded separately).
+- **main.py**: Handles scraping schedules from external website and storing them in DB.
+- **scheduler.py**: Handles scheduling-related logic.
 
 ### Additional Scripts
 
-- **notifications.py**: Handles user notifications (uploaded separately).
+- **notifications.py**: Script to notify users about power outages.
 
 ---
 
@@ -123,15 +123,6 @@ This project consists of a FastAPI-based backend application and a Telegram bot 
 
 ---
 
-## API Documentation
-
-The FastAPI backend includes interactive documentation available at:
-
-- Swagger UI: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
-
----
-
 ## Usage Instructions
 
 ### Telegram Bot
@@ -149,14 +140,6 @@ The FastAPI backend includes interactive documentation available at:
   ```bash
   curl -X GET http://localhost:8000/cities
   ```
-
----
-
-## Future Enhancements
-
-- Implement notification system to alert users about schedule updates.
-- Add support for multiple languages in the Telegram bot.
-- Improve database indexing for faster queries.
 
 ---
 
@@ -181,4 +164,4 @@ The FastAPI backend includes interactive documentation available at:
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License.
